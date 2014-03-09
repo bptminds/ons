@@ -103,10 +103,10 @@ grails {
 	mail {
 		host = "smtp.mandrillapp.com"
 		port = 587
-		username = "paulcitarella"
-		password = "JEg-I9BapHcYLT8gKesUiw"
+		username = ""
+		password = ""
 	}
-	mail.default.from = "info@enterprise-grails.com"
+	mail.default.from = "info@oursite.com"
 }
 
 if (!(Environment.current in [Environment.DEVELOPMENT, Environment.TEST])) {

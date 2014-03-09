@@ -16,36 +16,37 @@ class BootStrap {
             assert roleAdmin
             
             def users = [
-                    ronb: ['Ron Burgundy', 'ronb@asdf.com', 'Apt. 1A'],
-                    brianf: ['Brian Fantana', 'brianf@asdf.com', 'Apt. 1B'],
-                    brickt: ['Brick Tamland', 'brickt@asdf.com', 'Apt. 1C']
+                    admin: ['Admin Admin', 'admin@admin.com', 'Add 1'],
+                    user1: ['User One', 'user1@asdf.com', 'Add 1'],
+                    user2: ['User Two', 'user2@asdf.com', 'Add 1']
                     ]
         
             users.each { uname, data ->
-                def user = new User(password:'asdf', fullName:data[0], email:data[1],
+                def user = new User(password:'admin', fullName:data[0], email:data[1],
                         dateOfBirth:Date.parse("yyyy-MM-dd'T'HH:mm:ssz", "1935-07-17T00:00:00EST"),
                         address:new Address(
                             address1: '123 Street Rd.',
                             address2: data[2],
-                            city: 'San Diego',
-                            state: 'CA',
-                            postalCode: '92101'
+                            city: 'Stamford',
+                            state: 'CT',
+                            postalCode: '06905'
                         ))
                 user.save(flush:true, failOnError:true)
-                UserRole.create user, (uname == 'ronb' ? roleAdmin : roleUser), true
+                UserRole.create user, (uname == 'admin' ? roleAdmin : roleUser), true
             }
         
         }
     
+    
         if (!Project.count()) {
-            def ronb = User.findByEmail('ronb@asdf.com')
-            assert ronb
+            def admin = User.findByEmail('admin@admin.com')
+            assert admin
             
-            def p1 = new Project(name:"Galahad Webapp", owner:ronb)
+            def p1 = new Project(name:"Galahad Webapp", owner:admin)
             p1.save(failOnError:true)
-            def p2 = new Project(name:"Galahad JSON API", owner:ronb)
+            def p2 = new Project(name:"Galahad JSON API", owner:admin)
             p2.save(failOnError:true)
-            def p3 = new Project(name:"Galahad Admin Tool", owner:ronb)
+            def p3 = new Project(name:"Galahad Admin Tool", owner:admin)
             p3.save(failOnError:true)
         
             new Task(descr:"Use f:display tag for show scaffolding", due: new Date() + 5, project:p1).save(failOnError:true)
@@ -56,6 +57,7 @@ class BootStrap {
             new Task(descr:"Setup plugins", due: new Date() + 10, project:p2).save(failOnError:true)
             new Task(descr:"Build sample controllers for two resource collections", due: new Date() + 15, project:p2).save(failOnError:true)
         }
+    
     }
     
     def destroy = {

@@ -9,7 +9,7 @@
 		<meta name="description" content="">
 		<meta name="author" content="">
 	
-		<title><g:layoutTitle default="${meta(name: 'app.name')}"/></title>
+		<title><g:layoutTitle default="OnSchedule"/></title>
 
 	    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
 		<link rel="shortcut icon" href="${resource(dir: 'images', file: 'favicon.ico')}" type="image/x-icon">

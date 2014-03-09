@@ -3,8 +3,8 @@ grails.project.class.dir = "target/classes"
 grails.project.test.class.dir = "target/test-classes"
 grails.project.test.reports.dir = "target/test-reports"
 grails.project.work.dir = "target/work"
-grails.project.source.level = 1.7
-grails.project.target.level = 1.7
+grails.project.source.level = 1.6
+grails.project.target.level = 1.6
 
 grails.project.fork = [
     test: [maxMemory: 768, minMemory: 64, debug: false, maxPerm: 256, daemon:true],
@@ -65,7 +65,7 @@ grails.project.dependency.resolution = {
         runtime ":database-migration:1.3.8"
         runtime ":jquery:1.11.0.2"
 		runtime ":jquery-ui:1.10.3"
-        runtime ":resources:1.2.7"
+        runtime ":resources:1.2.1"
         runtime ":cache-headers:1.1.5"
         runtime ":cached-resources:1.1"
         runtime ":zipped-resources:1.0.1"

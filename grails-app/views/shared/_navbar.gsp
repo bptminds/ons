@@ -12,7 +12,7 @@
 				<span class="icon-bar"></span>
 			</button>
 		
-			<a class="navbar-brand" href="${createLink(uri: '/')}">${meta(name: 'app.name')}</a>
+			<a class="navbar-brand" href="${createLink(uri: '/')}">OnSchedule</a>
 		</div>
 
 		<div class="navbar-collapse collapse" id="navbar-collapse-1">
@@ -25,8 +25,6 @@
 				<sec:ifNotLoggedIn>
 					<li<%= request.forwardURI == "${createLink(uri: '/')}" ? ' class="active"' : '' %>><a href="${createLink(uri: '/')}">Home</a></li>
 				    <li><a href="${createLink(uri: '/')}">About</a></li>
-				    <li><a href="${createLink(uri: '/')}">Tour</a></li>
-				    <li><a href="${createLink(uri: '/')}">Pricing</a></li>
 				</sec:ifNotLoggedIn>
 			</ul>
 			
