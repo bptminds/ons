@@ -13,7 +13,7 @@ class BootStrap {
             def roleUser = Role.findByAuthority('ROLE_USER')
             def roleAdmin = Role.findByAuthority('ROLE_ADMIN')
             assert roleUser
-            assert roleAdmin
+            assert roleAdmin 
             
             def users = [
                     admin: ['Admin Admin', 'admin@admin.com', 'Add 1'],
