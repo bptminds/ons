@@ -10,8 +10,8 @@ class UrlMappings {
 		"/registration"(controller:'registration')
 		"/login"(controller:'login')
 		"/logout"(controller:'logout')
-		"/projects"(resources:'project')
-		"/tasks"(resources:'task')
+		//"/projects"(resources:'project')
+		//"/tasks"(resources:'task')
 		"/users"(resources:'user')
 		
 		"403"(view:'/errors/403')

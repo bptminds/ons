@@ -7,7 +7,7 @@
 
 	<body>
         <div class="billboard">
-            <r:img dir="images" file="billboard.jpg" />
+            <r:img dir="images" file="employee-scheduling-main.jpg" />
             <div class="billboard-caption">
               <h1>OnSchedule</h1>
               <p class="lead">Employee Scheduling made easy</p>

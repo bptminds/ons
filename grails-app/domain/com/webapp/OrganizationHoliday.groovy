@@ -1,26 +1,24 @@
 package com.webapp
 
-class Project {
-    
+class OrganizationHoliday {
     String name
-    User owner
+    Date starttime
+    Date endtime
     Date dateCreated
     Date lastUpdated
-    
-    static hasMany = [tasks:Task]
+
+    static belongsTo = [organization:Organization]
 
     static constraints = {
         name blank:false
+        starttime blank:false
+        endtime blank:false
     }
 	
-	static mapping = {
-		tasks sort:'id'
-	}
-	
     static views = [
-	    list: [includes:['name', 'owner']],
+	    list: [includes:['name', 'starttime', 'endtime']],
 	    show: [excludes:['lastUpdated']],
-	    create: [excludes:['tasks', 'dateCreated', 'lastUpdated']],
+	    create: [excludes:['dateCreated', 'lastUpdated']],
 	    edit: [excludes:['dateCreated', 'lastUpdated']]
 	]
 	

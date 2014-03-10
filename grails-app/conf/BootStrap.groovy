@@ -37,25 +37,15 @@ class BootStrap {
         
         }
     
-    
-        if (!Project.count()) {
+        if (!Organization.count()) {
             def admin = User.findByEmail('admin@admin.com')
             assert admin
-            
-            def p1 = new Project(name:"Galahad Webapp", owner:admin)
-            p1.save(failOnError:true)
-            def p2 = new Project(name:"Galahad JSON API", owner:admin)
-            p2.save(failOnError:true)
-            def p3 = new Project(name:"Galahad Admin Tool", owner:admin)
-            p3.save(failOnError:true)
-        
-            new Task(descr:"Use f:display tag for show scaffolding", due: new Date() + 5, project:p1).save(failOnError:true)
-            new Task(descr:"Implement basic sign up flow", due: new Date() + 10, project:p1).save(failOnError:true)
-            new Task(descr:"Starter features page based on boostrap jumbotron template", due: new Date() + 15, project:p1).save(failOnError:true)
-        
-            new Task(descr:"Put base project together", due: new Date() + 5, project:p2).save(failOnError:true)
-            new Task(descr:"Setup plugins", due: new Date() + 10, project:p2).save(failOnError:true)
-            new Task(descr:"Build sample controllers for two resource collections", due: new Date() + 15, project:p2).save(failOnError:true)
+
+            def org1 = new Organization(name:"Number one Organization")
+            org1.save(failOnError:true)
+
+            new OrganizationHoliday(organization: org1, name:"Martin Luther King Jr Day", starttime: Date.parse("yyyy-MM-dd'T'HH:mm:ssz", "2014-01-20T00:00:00EST"), endtime: Date.parse("yyyy-MM-dd'T'HH:mm:ssz", "2014-01-20T23:59:59EST")).save(failOnError:true)
+            new OrganizationHoliday(organization: org1, name:"President's Day", starttime: Date.parse("yyyy-MM-dd'T'HH:mm:ssz", "2014-02-17T00:00:00EST"), endtime: Date.parse("yyyy-MM-dd'T'HH:mm:ssz", "2014-02-17T23:59:59EST")).save(failOnError:true)
         }
     
     }
