@@ -76,6 +76,7 @@ grails {
 				"/console/**": 					  ["ROLE_ADMIN"],
 				"/dbconsole/**": 				  ["ROLE_ADMIN"]
 			]
+            /*
             secureChannel.definition = [
 				'/registration/**': 			  'REQUIRES_SECURE_CHANNEL',
 				'/login/**': 					  'REQUIRES_SECURE_CHANNEL',
@@ -83,6 +84,7 @@ grails {
 				'/console/**': 					  'REQUIRES_SECURE_CHANNEL',
 				'/dbconsole/**': 				  'REQUIRES_SECURE_CHANNEL'
             ]
+            */
         }
         databasemigration {
             updateOnStartFileNames = ['changelog.groovy']
