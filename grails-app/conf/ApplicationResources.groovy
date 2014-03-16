@@ -7,6 +7,9 @@ modules = {
         resource url: 'js/bootstrap-datetimepicker.js'
         resource url: 'js/application.js'
         resource url: 'css/application.css'
+        resource url: 'fullcalendar/fullcalendar.css'
+        resource url: 'fullcalendar/fullcalendar.min.js'
+        resource url: 'fullcalendar/fullcalendar.print.css'
     }
 	
     images {

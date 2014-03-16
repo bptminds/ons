@@ -61,14 +61,16 @@ grails.project.dependency.resolution = {
         compile ":mail:1.0.1"
         compile ":quartz:1.0.1"
 
+        compile ":full-calendar:1.5.1.0"
+
         runtime ":hibernate:3.6.10.8"
         runtime ":database-migration:1.3.8"
         runtime ":jquery:1.11.0.2"
 		runtime ":jquery-ui:1.10.3"
         runtime ":resources:1.2.1"
-        runtime ":cache-headers:1.1.5"
-        runtime ":cached-resources:1.1"
-        runtime ":zipped-resources:1.0.1"
+        //runtime ":cache-headers:1.1.5"
+        //runtime ":cached-resources:1.1"
+        //runtime ":zipped-resources:1.0.1"
         
 		test ":geb:0.9.2"
     }

@@ -13,4 +13,8 @@ class HomeController {
 			render view:"index"
 		}
 	}
+
+	def calendar() {
+		render view: '/calendar/index', model: [users: User.list()]
+	}
 }
