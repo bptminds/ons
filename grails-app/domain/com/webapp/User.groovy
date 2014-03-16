@@ -13,6 +13,7 @@ class User {
 	String fullName
 	String email
 	Date dateOfBirth
+	
 	Address address
 	
 	static embedded = ["address"]
